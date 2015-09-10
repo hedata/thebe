@@ -390,9 +390,11 @@ define(['base/js/namespace', 'jquery', 'components/es6-promise/promise.min', 'th
         }
       }
     };
-    Thebe.prototype.test_create_cell = function (){
-      cell = this.notebook.insert_cell_at_bottom('code');
+    Thebe.prototype.test_create_cell = function (jsoncell){
+      console.log(jsoncell.cell_type)
+      cell = this.notebook.insert_cell_at_bottom(jsoncell.cell_type);
       this.cells.push(cell);
+      cell.fromJSON(jsoncell);
     };
     Thebe.prototype.show_cell_state = function(state, cell_id) {
       this.set_state(state);
