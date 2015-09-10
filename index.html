@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="static/thebe/site.css" type="text/css"/>
-    
+
     <!-- This example uses requirejs to dynamically load scripts -->
     <!-- which is good for local development, because we don't need to rebuild everything when we make a change. -->
-    
+
     <!-- See examples/build.html for an example of using the compiled/built javascript -->
     <!-- that does not require any knowledge or use of require.js -->
 
@@ -26,7 +26,7 @@
       define('jquery', [], jQuery);
 
       require.config({
-          
+
           baseUrl: 'static/',
           paths: {
             underscore : 'components/underscore/underscore-min',
@@ -61,8 +61,12 @@
       // Require thebe, instantiate it
       require(['main'], function(main){
           // To run this locally, replace this url with the url of your notebook server or tmpnb server
-          thebe = new main.Thebe({url:"https://oreillyorchard.com:8000"});
-          
+          thebe = new main.Thebe({url:"https://notebook.thrive.to/localtest/"
+            ,tmpnb_mode: false
+            , kernel_name: "python3"
+            , debug : false
+          });
+
           // The default is //192.168.59.103:8000/spawn/, tmpnb running on boot2docker
           // thebe = new main.Thebe();
           // All the other examples on master use this default.
