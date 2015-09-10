@@ -592,7 +592,7 @@ define(['base/js/namespace', 'jquery', 'components/es6-promise/promise.min', 'th
         notebook_path: '',
         notebook_name: ''
       };
-      this.notebook_el = $('<div id="notebook"></div>').prependTo('body');
+      this.notebook_el = $('<div id="notebook"></div>');
       this.notebook = new notebook.Notebook('div#notebook', $.extend({
         events: this.events,
         keyboard_manager: keyboard_manager,
