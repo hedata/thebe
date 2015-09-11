@@ -223,7 +223,7 @@ define(['base/js/namespace', 'jquery', 'components/es6-promise/promise.min', 'th
     Thebe.prototype.build_thebe = function() {
       var focus_edit_flag, get_cell_id_from_event;
       this.notebook.writable = false;
-      this.notebook._unsafe_delete_cell(0);
+      //this.notebook._unsafe_delete_cell(0);
       $(this.selector).add(this.options.not_executable_selector).each((function(_this) {
         return function(i, el) {
           var cell, controls, original_id, wrap;
