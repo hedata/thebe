@@ -9,7 +9,7 @@ define(['base/js/namespace', 'jquery', 'components/es6-promise/promise.min', 'th
     Thebe.prototype.default_options = {
       selector: 'pre[data-executable]',
       url: 'https://notebook.thrive.to/localtest/',
-      tmpnb_mode: true,
+      tmpnb_mode: false,
       kernel_name: "python3",
       append_kernel_controls_to: false,
       inject_css: true,
